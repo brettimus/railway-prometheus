@@ -3,5 +3,5 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       # Replace the port with the port your /metrics endpoint is running on
-      - targets: ['python-fastapi-animals.railway.internal:8080']
+      - targets: ['python-fastapi-animals.railway.internal']
     scrape_interval: 5s
