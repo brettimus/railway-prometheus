@@ -5,6 +5,11 @@ scrape_configs:
       # Replace the port with the port your /metrics endpoint is running on
       - targets: ['python-fastapi-animals-production.up.railway.app']
     scrape_interval: 5s
+  - job_name: autometrics-slack-app
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - "autometrics-slack-app.railway.internal"
 
 rule_files:
   - "/etc/prometheus/autometrics.rules.yml"
