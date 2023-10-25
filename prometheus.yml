@@ -9,13 +9,13 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       - targets:
-          - "autometrics-slack-app"
+          - "autometrics-slack-app-production.up.railway.app"
 
 rule_files:
   - "/etc/prometheus/autometrics.rules.yml"
 
 alerting:
   alertmanagers:
-    - scheme: http
+    - scheme: https
       static_configs:
-        - targets: [ 'railway-alertmanager.railway.internal' ]
+        - targets: [ 'railway-alertmanager-production.up.railway.app' ]
