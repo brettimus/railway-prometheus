@@ -9,7 +9,7 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       - targets:
-          - "autometrics-slack-app.railway.internal"
+          - "autometrics-slack-app"
 
 rule_files:
   - "/etc/prometheus/autometrics.rules.yml"
